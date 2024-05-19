@@ -21,11 +21,11 @@ git clone https://github.com/yourusername/KKBottomSheet.git
 
 cd KKBottomSheet
 
-Open KKBottomSheet.xcodeproj in Xcode and run the project on your desired simulator or device.
+Open **KKBottomSheet.xcodeproj** in Xcode and run the project on your desired simulator or device.
 
 # Usage
 # Main ViewController
-ViewController is the main view controller that presents the bottom sheet. It includes a button that triggers the presentation of BottomSheetViewController.
+**ViewController** is the main view controller that presents the bottom sheet. It includes a button that triggers the presentation of BottomSheetViewController.
 
 import UIKit
 
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 }
 
 # Custom Presentation Controller
-For iOS versions earlier than 15, HalfScreenPresentationController is used to present the bottom sheet. It defines the frame for the presented view.
+For iOS versions earlier than 15, **HalfScreenPresentationController** is used to present the bottom sheet. It defines the frame for the presented view.
 
 import UIKit
 
@@ -73,7 +73,7 @@ class HalfScreenPresentationController: UIPresentationController {
 }
 
 # Bottom Sheet ViewController
-BottomSheetViewController contains the search bar, cancel button, and table view. It manages the search functionality and displays the list of items.
+**BottomSheetViewController** contains the search bar, cancel button, and table view. It manages the search functionality and displays the list of items.
 
 import UIKit
 
@@ -161,7 +161,7 @@ class BottomSheetViewController: UIViewController, UISearchBarDelegate, UITableV
 }
 
 # Custom Transition Animations
-BottomSheetTransitioningDelegate manages the custom presentation and dismissal animations.
+**BottomSheetTransitioningDelegate** manages the custom presentation and dismissal animations.
 
 class BottomSheetTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
@@ -178,7 +178,7 @@ class BottomSheetTransitioningDelegate: NSObject, UIViewControllerTransitioningD
     }
 }
 
-BottomSheetPresentAnimator and BottomSheetDismissAnimator handle the presentation and dismissal animations, respectively.
+**BottomSheetPresentAnimator** and **BottomSheetDismissAnimator** handle the presentation and dismissal animations, respectively.
 
 class BottomSheetPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
