@@ -15,8 +15,10 @@ KKBottomSheet is an iOS application that demonstrates how to implement a bottom 
 - Xcode 12.0+
 
 # Installation
-Clone the repository:
+**Clone the repository:**
+
 git clone https://github.com/yourusername/KKBottomSheet.git
+
 cd KKBottomSheet
 
 Open KKBottomSheet.xcodeproj in Xcode and run the project on your desired simulator or device.
