@@ -14,6 +14,13 @@ KKBottomSheet is an iOS application that demonstrates how to implement a bottom 
 - Swift 5
 - Xcode 12.0+
 
+# Installation
+Clone the repository:
+git clone https://github.com/yourusername/KKBottomSheet.git
+cd KKBottomSheet
+
+Open KKBottomSheet.xcodeproj in Xcode and run the project on your desired simulator or device.
+
 # Usage
 # Main ViewController
 ViewController is the main view controller that presents the bottom sheet. It includes a button that triggers the presentation of BottomSheetViewController.
