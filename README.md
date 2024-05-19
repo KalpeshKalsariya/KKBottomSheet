@@ -151,6 +151,7 @@ class BottomSheetViewController: UIViewController, UISearchBarDelegate, UITableV
 
 # Custom Transition Animations
 BottomSheetTransitioningDelegate manages the custom presentation and dismissal animations.
+
 class BottomSheetTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
