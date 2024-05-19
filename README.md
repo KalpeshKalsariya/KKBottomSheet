@@ -169,3 +169,53 @@ class BottomSheetTransitioningDelegate: NSObject, UIViewControllerTransitioningD
     }
 }
 
+BottomSheetPresentAnimator and BottomSheetDismissAnimator handle the presentation and dismissal animations, respectively.
+
+class BottomSheetPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.3
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        guard let toViewController = transitionContext.viewController(forKey: .to) else {
+            return
+        }
+        
+        let containerView = transitionContext.containerView
+        let finalFrame = transitionContext.finalFrame(for: toViewController)
+        
+        let initialFrame = finalFrame.offsetBy(dx: 0, dy: finalFrame.height)
+        toViewController.view.frame = initialFrame
+        containerView.addSubview(toViewController.view)
+        
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+            toViewController.view.frame = finalFrame
+        }, completion: { finished in
+            transitionContext.completeTransition(finished)
+        })
+    }
+}
+
+class BottomSheetDismissAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.3
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        guard let fromViewController = transitionContext.viewController(forKey: .from) else {
+            return
+        }
+        
+        let initialFrame = transitionContext.initialFrame(for: fromViewController)
+        let finalFrame = initialFrame.offsetBy(dx: 0, dy: initialFrame.height)
+        
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+            fromViewController.view.frame = finalFrame
+        }, completion: { finished in
+            transitionContext.completeTransition(finished)
+        })
+    }
+}
+
+# Conclusion
+KKBottomSheet provides a comprehensive example of how to implement a bottom sheet in iOS with support for both modern and older versions of the OS. It includes custom animations, a search functionality, and a smooth user experience. Feel free to customize and extend this code for your own projects.
