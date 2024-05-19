@@ -10,6 +10,6 @@ Highlighting of the selected item
 Smooth animations for presenting and dismissing the bottom sheet
 
 # Requirements
-iOS 13.0+
-Swift 5
-Xcode 12.0+
+- iOS 13.0+ 
+- Swift 5
+- Xcode 12.0+
