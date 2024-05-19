@@ -8,3 +8,8 @@ Search bar to filter items in the table view
 Cancel button to dismiss the bottom sheet
 Highlighting of the selected item
 Smooth animations for presenting and dismissing the bottom sheet
+
+# Requirements
+iOS 13.0+
+Swift 5
+Xcode 12.0+
